@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>akin</title>
+
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script src="libraries/p5.js"></script>
+
+</head>
+<body>
+  <img class="logo-img" src="source/akin_logo.png" alt="logo">
+
+  <div class="image-side-container">
+    <img src="source/img3.JPG" alt="forest" style="height:100%"></img>
+  </div>
+
+  <div style="position:absolute; left: 50%; top:0;">
+    <h1 class="variation">1 of 2</h1>
+  </div>
+
+<div class="fade-in container">
+  <div>
+    <h1>A bit about yourself...</h1>
+    <p>Tell us a bit about yourself and<br>how you would like to be contacted</p>
+  </div>
+</div>
+
+      <div class="fade-in textSurveyContainer">
+        <label for="name">My name is</label>
+        <input type="text" id="name" placeholder="your name" maxlength="25" spellcheck="false" autocomplete="off"></input>
+        <h2 class="h2-variant">.</h2>
+        <label for="country">I am from</label>
+        <div>
+          <select id="country">
+            <option value="" disabled selected>your country</option>
+          </select>
+        </div>
+        <h2 class="h2-variant">and</h2>
+        <label class="label-variant">I'm currently living in</label>
+        <div>
+          <select id="location">
+            <option value="" disabled selected>your country</option>
+          </select>
+        </div>
+        <h2 class="h2-variant">.</h2>
+        <label for="email">My email is</label>
+        <input type="text" id="email" placeholder="your.email@email.com" maxlength="100" spellcheck="false" autocomplete="off"></input>
+      </div>
+
+      <script src="scripts/countryOpt.js"></script>
+
+      <a href="create_2.html">
+        <button type="submit" class="custom-button center">Next</button>
+      </a>
+
+</body>
+
+</html>

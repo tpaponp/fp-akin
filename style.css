@@ -1,0 +1,260 @@
+:root {
+    --DarkGreen: #285B33;
+    --LightGreen: #64DD7F;
+    --Dandelion: #FFEA2D;
+    --LightGrey: #EBEBEB;
+    --DarkGrey: #525252;
+}
+
+@font-face {
+    font-family: Geograph-Regular;
+    src: url(/fonts/TestGeograph-Regular.otf);
+}
+
+@font-face {
+    font-family: Geograph-Medium;
+    src: url(/fonts/TestGeograph-Medium.otf);
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    position:fixed;
+}
+
+body {
+    margin:20px;
+    overflow: auto;
+}
+
+a {
+    color: var(--DarkGrey);
+    text-decoration: underline;
+    text-decoration-color: var(--DarkGrey);
+    font-family: Geograph-Regular;
+    font-size: 12px;
+    transition: text-decoration 2s ease-in-out, color 1s ease-in-out;
+}
+
+a:hover {
+    color: var(--Dandelion);
+    text-decoration: none;
+}
+
+h1 {
+    color: #285B33;
+    font-family: Geograph-Medium;
+    font-size: 30px;
+    line-height: 105%; /* 42px */
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: black;
+    font-family: Geograph-Regular;
+    font-size: 24px;
+    line-height: 105%;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.h2-variant {
+    margin: 0px;
+}
+
+.variation {
+    color: #EBEBEB;
+}
+
+p {
+    color: black;
+    font-family: Geograph-Regular;
+    font-size: 16px;
+    line-height: 120%;
+    font-style: normal;
+    font-weight:400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+div {
+    margin: 0;
+}
+
+.fade-in {
+    opacity: 0; /* Initially invisible */
+    animation: fadeIn 1s ease-in-out forwards; /* Apply animation */
+}
+
+.delay-1 {
+    animation-delay: 1s; /* Delay for the first div */
+}
+
+.delay-2 {
+    animation-delay: 2s; /* Delay for the second div */
+}
+
+.delay-3 {
+    animation-delay: 3s; /* Delay for the first div */
+}
+
+.fade-in-slow {
+    opacity: 0;
+    animation: fadeIn 10s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.custom-button {
+    position: absolute;
+    bottom: 20px;
+
+    border: 0.5px solid #525252;
+    background-color: white;
+    color: black;
+    font-family: Geograph-Medium;
+    font-size: 14px;
+    transition: background-color 1s ease-in-out;
+    
+    width: 310px;
+    height: 60px;
+}
+
+.custom-button:hover{
+    border: 0.5px solid var(--Dandelion);
+    background-color: var(--Dandelion);
+}
+
+.image-side-container{
+    width: 37.5%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.image-side{
+    height: 100%;
+    width:auto;
+}
+
+select {
+    outline: none;
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+
+    font-family: Geograph-Regular;
+    font-size: 24px;
+    color: var(--DarkGreen);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select option {
+    font-family: Geograph-Regular;
+    font-size: 18px;
+    background-color: white;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+
+    font-family: Geograph-Regular;
+    font-size: 24px;
+    color: var(--DarkGreen);
+}
+
+input[type="text"]::placeholder {
+    color: var(--DarkGreen);
+    font-size: 24px;
+  }
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+}
+
+.center {
+    left: 50%;
+}
+
+.textSurveyContainer {
+    position: absolute;
+    width: 550px;
+
+    left: 50%;
+    top: 370px;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    color: black;
+    font-family: Geograph-Regular;
+    font-size: 24px;
+    line-height: 105%;
+    font-style: normal;
+    font-weight: 500;
+    margin-left:0;
+    margin-right: 5px;
+}
+
+.flexContainer{
+    position: absolute;
+    left:50%;
+    top: 322px;
+    display:flex;
+    flex-direction: row;
+}
+
+.checkboxColumn {
+    flex: 1;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    color: var(--DarkGrey);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+.hidden-checkbox {
+    display: none;
+}
+
+.hidden-checkbox:checked + .custom-checkbox {
+    color: var(--LightGreen);
+}
+
+.custom-checkbox:hover{
+    color: black;
+}
